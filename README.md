@@ -7,7 +7,7 @@ Get a distribution from the [releases page](https://github.com/h0tk3y/git-split/
 
 ```
 Usage:
-git-split {--from filename {--to filename}+ }+
+git-split {--from filename --to {filename}+ }+
 git-split --instruction filename
 
 The --instruction file format is the same as command line format, with arguments
@@ -16,11 +16,21 @@ put on separate lines, for example:
 --from
   abc.txt
 --to
-  abc1.txt
-  abc2.txt
+  abcCopy1.txt
+  abcCopy2.txt
 
 --from
   def.txt
 --to
-  def123.txt
+  defCopy.txt
+```
+
+Example:
+
+```
+git-split --from abc.txt --to abcCopy1.txt abcCopy2.txt
+```
+
+```
+git-split --instruction instruction.txt
 ```

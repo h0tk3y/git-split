@@ -14,7 +14,6 @@ internal fun exec(commandLine: List<String>): String {
     if (intResult != 0) {
         val message = buildString {
             appendln("Command finished with non-zero code $intResult")
-            appendln(command)
             appendln("Output: " + returnValue)
             appendln("Error stream: " + err)
         }

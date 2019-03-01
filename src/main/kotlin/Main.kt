@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
                 Copy files preserving Git history for all of the resulting files.
 
                 Usage:
-                git-split {--from filename {--to filename}+ }+
+                git-split {--from filename --to {filename}+ }+
                 git-split --instruction filename
 
                 The --instruction file format is the same as command line format, with arguments
@@ -21,13 +21,13 @@ fun main(args: Array<String>) {
                 --from
                   abc.txt
                 --to
-                  abc1.txt
-                  abc2.txt
+                  abcCopy1.txt
+                  abcCopy2.txt
 
                 --from
                   def.txt
                 --to
-                  def123.txt
+                  defCopy.txt
             """.trimIndent())
             return
         }
