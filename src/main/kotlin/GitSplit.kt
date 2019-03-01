@@ -45,8 +45,8 @@ internal fun executeSplitInstruction(instruction: SplitInstruction) {
 
     gitCommit(
         "(step ${stepsNeeded - 1}/$stepsNeeded) " + description +
-                "\n\nThis commit moves the orgiinal files to \n" +
-                "temprorary files suffixed with '$tmpFileSuffix'"
+                "\n\nThis commit moves the original files to \n" +
+                "temporary files suffixed with '$tmpFileSuffix'"
     )
 
     gitMerge(copyCommits)
