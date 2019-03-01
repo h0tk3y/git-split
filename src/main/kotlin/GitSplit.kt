@@ -80,5 +80,9 @@ private fun gitRevParseHead(): String =
     exec("git", "rev-parse", "HEAD").removeSuffix("\n")
 
 private fun gitMerge(revisions: List<String>) {
-    exec("git", "merge", *revisions.toTypedArray())
+    exec(
+        "git", "merge",
+        *(if (revisions.size == 1) arrayOf("-s", "resolve") else arrayOf()),
+        *revisions.toTypedArray()
+    )
 }
